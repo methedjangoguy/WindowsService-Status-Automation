@@ -1,0 +1,10 @@
+{
+   "jsonfile": "service_checks.json",
+   "services": ["your", "service","names"],
+   "monitoring_interval":30,
+   "receiver_emails": ["list","of","receipent","emails"],
+   "cc_emails": ["list","of","cc","emails"],
+   "host": "smtp.gmail.com",
+   "sender_email": "your@gmail.com",
+   "password":"yourapppassword"
+}

@@ -1,0 +1,89 @@
+2024-03-07 18:48:37,586 | INFO | root | Process Execution Started.
+
+2024-03-07 18:48:37,734 | INFO | werkzeug |  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-03-07 18:48:52,428 | INFO | root | Process Execution Ended.
+2024-03-07 18:48:52,428 | INFO | root | Process Execution Started.
+
+2024-03-07 18:50:55,171 | INFO | root | Process Execution Started.
+
+2024-03-07 18:50:55,209 | INFO | werkzeug |  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-03-07 18:51:49,646 | INFO | root | Process Execution Ended.
+2024-03-07 18:51:49,646 | INFO | root | Process Execution Started.
+
+2024-03-07 19:04:36,023 | INFO | root | Process Execution Started.
+
+2024-03-07 19:04:36,052 | INFO | werkzeug |  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-03-07 19:05:24,142 | INFO | root | Process Execution Ended.
+2024-03-07 19:05:24,142 | INFO | root | Process Execution Started.
+
+2024-03-07 19:06:18,552 | INFO | root | Process Execution Started.
+
+2024-03-07 19:06:18,568 | INFO | werkzeug |  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-03-07 19:08:03,783 | INFO | root | Process Execution Ended.
+2024-03-07 19:08:03,783 | INFO | root | Process Execution Started.
+
+2024-03-07 19:10:24,440 | INFO | root | Process Execution Started.
+
+2024-03-07 19:10:24,469 | INFO | werkzeug |  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-03-07 19:16:15,004 | INFO | root | Process Execution Started.
+
+2024-03-07 19:16:15,043 | INFO | werkzeug |  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-03-07 19:16:24,194 | INFO | root | Process Execution Ended.
+2024-03-07 19:16:24,194 | INFO | root | Process Execution Started.
+
+2024-03-07 19:21:31,368 | INFO | root | Process Execution Started.
+
+2024-03-07 19:21:31,400 | INFO | werkzeug |  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-03-07 19:22:43,080 | INFO | root | Process Execution Started.
+
+2024-03-07 19:22:43,095 | INFO | werkzeug |  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-03-07 19:43:34,998 | INFO | root | Process Execution Started.
+
+2024-03-07 19:43:35,040 | INFO | werkzeug |  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-03-07 19:43:43,660 | INFO | root | Process Execution Ended.
+2024-03-07 19:43:43,660 | INFO | root | Process Execution Started.
+
+2024-03-07 19:47:58,058 | INFO | root | Process Execution Started.
+
+2024-03-07 19:47:58,095 | INFO | werkzeug |  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-03-07 19:51:28,719 | INFO | root | Process Execution Started.
+
+2024-03-07 19:51:28,760 | INFO | werkzeug |  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-03-07 19:54:52,637 | INFO | root | Process Execution Started.
+
+2024-03-07 19:54:52,654 | INFO | werkzeug |  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-03-07 20:22:32,729 | INFO | root | Process Execution Started.
+
+2024-03-07 20:22:32,729 | INFO | server | Server Started.
+2024-03-07 20:22:32,945 | INFO | werkzeug |  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-03-07 20:22:36,879 | INFO | email | Alert mail sent for AppIDSvc.
+2024-03-07 20:22:40,692 | INFO | email | Alert mail sent for autotimesvc.
+2024-03-07 20:22:40,693 | INFO | root | Service checks done. Next check in 30 seconds, at 2024-03-07 20:23:10
+2024-03-07 20:23:10,706 | WARNING | email | Alert email already sent for AppIDSvc.
+2024-03-07 20:23:10,707 | WARNING | email | Alert email already sent for autotimesvc.
+2024-03-07 20:23:10,707 | INFO | root | Service checks done. Next check in 30 seconds, at 2024-03-07 20:23:40
+2024-03-07 20:23:29,638 | INFO | root | Process Execution Started.
+
+2024-03-07 20:23:29,638 | INFO | server | Server Started.
+2024-03-07 20:23:29,639 | WARNING | email | Alert email already sent for AppIDSvc.
+2024-03-07 20:23:29,640 | WARNING | email | Alert email already sent for autotimesvc.
+2024-03-07 20:23:29,641 | INFO | root | Service checks done. Next check in 30 seconds, at 2024-03-07 20:23:59
+2024-03-07 20:23:29,655 | INFO | werkzeug |  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2024-03-07 20:57:08,921 | INFO | root | Process Execution Started.
+
+2024-03-07 20:57:08,921 | INFO | server | Server Started.
+2024-03-07 20:57:09,025 | INFO | werkzeug | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-03-07 20:57:09,025 | INFO | werkzeug | [33mPress CTRL+C to quit[0m
+2024-03-07 20:57:12,744 | INFO | email | Alert mail sent for AppIDSvc.
+2024-03-07 20:57:16,938 | INFO | email | Alert mail sent for autotimesvc.
+2024-03-07 20:57:16,939 | INFO | root | Service checks done. Next check in 30 seconds, at 2024-03-07 20:57:46
+2024-03-07 20:58:23,394 | INFO | root | Process Execution Started.
+
+2024-03-07 20:58:23,394 | INFO | server | Server Started.
+2024-03-07 20:58:23,396 | WARNING | email | Alert email already sent for AppIDSvc.
+2024-03-07 20:58:23,396 | WARNING | email | Alert email already sent for autotimesvc.
+2024-03-07 20:58:23,397 | INFO | root | Service checks done. Next check in 30 seconds, at 2024-03-07 20:58:53
+2024-03-07 20:58:23,414 | INFO | werkzeug | [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2024-03-07 20:58:23,414 | INFO | werkzeug | [33mPress CTRL+C to quit[0m
