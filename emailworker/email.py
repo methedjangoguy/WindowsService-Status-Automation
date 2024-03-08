@@ -61,7 +61,8 @@ def send_email(service_name):
         server.sendmail(sender_email, all_recipients, message.as_string())
         server.quit()
         EMAIL_SENT_HISTORY[service_name] = now
-        _email_logger.info(f"Alert mail sent for {service_name}.")
+        email_sent_time = now.strftime("%Y-%m-%d %H:%M:%S")
+        _email_logger.info(f"Alert mail sent for {service_name} at {email_sent_time}.")
         return True
     except Exception as e:
         _email_logger.error(f"Failed to send email for {service_name}: {str(e)}")
