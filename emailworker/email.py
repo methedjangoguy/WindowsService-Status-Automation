@@ -23,7 +23,8 @@ def should_send_email(service_name):
 def send_email(service_name):
     now = datetime.datetime.now()
     if not can_send_email(service_name, now):
-        _email_logger.warn(f"Alert email already sent for {service_name}.")
+        last_sent = EMAIL_SENT_HISTORY.get(service_name).strftime("%Y-%m-%d %H:%M:%S")  # Format the last sent time
+        _email_logger.warn(f"Alert email already sent for {service_name} at {last_sent}.")  # Include the last sent time in the message
         return False
 
     # Customize your email settings
