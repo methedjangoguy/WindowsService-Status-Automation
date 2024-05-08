@@ -1,6 +1,6 @@
 import log.log as log
 from service.servicestatus import *
-from config.config import configuration, CHECK_RESULTS, EMAIL_SENT_HISTORY
+from config.config import configuration, EMAIL_SENT_HISTORY, CHECK_RESULTS
 import json
 import datetime
 from emailworker.email import *
@@ -20,8 +20,12 @@ def load_existing_checks():
     if os.path.exists(CHECK_RESULTS_FILE):
         with open(CHECK_RESULTS_FILE, 'r') as file:
             CHECK_RESULTS = json.load(file)
+        # print("Loaded existing checks:", CHECK_RESULTS)
+    else:
+        print("No existing checks file found.")
 
 def load_email_sent_history():
+    global EMAIL_SENT_HISTORY
     # Load the last email sent times from the checks if available
     for check in CHECK_RESULTS.get('checks', []):
         for service in check.get('services', []):
@@ -36,7 +40,7 @@ def check_services():
 
     for service_name in SERVICES:
         status = get_service_status(service_name)
-        email_sent = send_email(service_name)
+        email_sent = send_email(service_name, status)
         
         if email_sent:
             last_email_sent_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -64,14 +68,13 @@ def check_services():
 def main():
     _root_logger.info(f"Process Execution Started.\n")
     while True:
+        load_existing_checks()
+        load_email_sent_history()
         check_services()
         time.sleep(monitoring_interval)
     _root_logger.info(f"Process Execution Ended.")
     
 if __name__ == "__main__":
-    load_existing_checks()
-    load_email_sent_history()
     thread = threading.Thread(target=main)
     thread.start()
     start_server()
-   
