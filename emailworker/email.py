@@ -1,6 +1,6 @@
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-from config.config import configuration, EMAIL_SENT_HISTORY, CHECK_RESULTS
+from config.config import configuration, EMAIL_SENT_HISTORY
 import datetime
 import smtplib
 import logging
@@ -20,13 +20,13 @@ def should_send_email(service_name):
         return False
     return True
 
-def send_email(service_name):
+def send_email(service_name, status):
     now = datetime.datetime.now()
     if not can_send_email(service_name, now):
         last_sent = EMAIL_SENT_HISTORY.get(service_name).strftime("%Y-%m-%d %H:%M:%S")  # Format the last sent time
-        _email_logger.warn(f"Alert email already sent for {service_name} at {last_sent}.")  # Include the last sent time in the message
+        _email_logger.warn(f"Alert email already sent for {service_name} at {last_sent} as it was in {status} state.")  # Include the last sent time in the message
         return False
-
+        
     # Customize your email settings
     sender_email = configuration.get_property("sender_email")
     host = configuration.get_property("host")
@@ -47,13 +47,12 @@ def send_email(service_name):
                 <head></head>
                 <body>
                     <p>Hi,</p>
-                    <p>The <b>{service_name}</b> service is in <b>stopped</b> state. Please carry out system checks.</p>
+                    <p>The <b>{service_name}</b> service is in <b>{status}</b> state. Please carry out system checks.</p>
                     <p>Thanks</p>
                 </body>
                 </html>
             """
     message.attach(MIMEText(body, "html"))
-
     try:
         server = smtplib.SMTP(host, 587)
         server.starttls()
@@ -62,9 +61,8 @@ def send_email(service_name):
         server.quit()
         EMAIL_SENT_HISTORY[service_name] = now
         email_sent_time = now.strftime("%Y-%m-%d %H:%M:%S")
-        _email_logger.info(f"Alert mail sent for {service_name} at {email_sent_time}.")
+        _email_logger.info(f"Alert mail sent for {service_name} at {email_sent_time} as it is in {status} state.")
         return True
     except Exception as e:
         _email_logger.error(f"Failed to send email for {service_name}: {str(e)}")
         return False
-
